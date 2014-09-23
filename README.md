@@ -41,11 +41,16 @@ I get 10 times more traffic from [Google][1] than from
 ##添加图片：
 
 行内形式（title 是选择性的）：
-
+语法：
+\!\[\]\(图片的地址\)
+<br>
 ![alt text](https://github.com/sunalong/theImages/blob/master/cat.png "Cat")
 
+<br>
 参考形式：
-
+语法：
+\!\[]\[varName\]<br>
+\[varName\]:图片地址
+<br>
 ![alt text][id]
-
 [id]: https://github.com/sunalong/theImages/blob/master/github.png "GitHub"
