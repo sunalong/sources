@@ -56,6 +56,8 @@ I get 10 times more traffic from [Google][1] than from
 [id]: https://github.com/sunalong/theImages/blob/master/github.png "GitHub"
 
 方法三：
-\<img src="图片地址" width="240"\>
+语法：\<img src="图片地址" width="240"\>
 <br>
 <img src="http://f.cl.ly/items/0W2i0E151s0B3S3x3E3W/ogp_.jpg" width="240">
+其中width="240"可不用加的，效果如下：<br>
+<img src="http://f.cl.ly/items/0W2i0E151s0B3S3x3E3W/ogp_.jpg">
