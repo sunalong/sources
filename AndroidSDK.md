@@ -13,8 +13,8 @@
 ![](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/addlibrary.png)
 
 ```xml
-	其中support v4包是供unit等使用的，Android studio推荐使用gradle配置：
-		app/build.gradle 的dependencies标签中：
+其中support v4包是供unit等使用的，Android studio推荐使用gradle配置：
+app/build.gradle 的dependencies标签中：
 compile 'com.android.support:appcompat-v7:25.3.0'
 ```
 
@@ -23,7 +23,7 @@ compile 'com.android.support:appcompat-v7:25.3.0'
 
 ###### 2.3.配置权限：
 ```xml
-	AndroidManifest.xml配置：
+AndroidManifest.xml配置：
 <uses-permission android:name="android.permission.CAMERA" />
 <uses-permission android:name="android.permission.RECORD_AUDIO" />
 <uses-permission android:name="android.permission.INTERNET" />
@@ -46,9 +46,9 @@ compile 'com.android.support:appcompat-v7:25.3.0'
 #### 三：接入：
 ###### 3.1 注册，传入上下文context：
 ```java
-	主线程中调用
-	函数原型：
-	public void register(Activity activity);
+主线程中调用
+函数原型：
+public void register(Activity activity);
 ```
 参数说明：
 
@@ -59,9 +59,9 @@ activity|android.app.Activity|当前的activity
 
 ###### 3.2 设置用户名与用户key:
 ```java
-	主线程中调用
-	函数原型：
-	    public native int setUserInfo(String username, String userkey);
+主线程中调用
+函数原型：
+    public native int setUserInfo(String username, String userkey);
 ```
 参数说明：
 
@@ -73,9 +73,9 @@ userkey|String|用户key
 
 ###### 3.3 初始化sdk:
 ```java
-	主线程中调用
-	函数原型：
-		public void initSDK(String appId, String key);
+主线程中调用
+函数原型：
+    public void initSDK(String appId, String key);
 ```
 参数说明：
 
@@ -88,9 +88,9 @@ key|String|官网上申请的key
 
 ###### 3.4 进入房间：
 ```java
-	主线程中调用
-	函数原型：
-	    public native int requestJoinPlatformRoom(String roomId);
+主线程中调用
+函数原型：
+    public native int requestJoinPlatformRoom(String roomId);
 ```
 参数说明：
 
@@ -100,9 +100,9 @@ roomId|String|房间名
 
 ###### 3.5 打开/关闭扬声器：
 ```java
-	主线程中调用，进入房间之后调用才有效
-	函数原型：
-		public native int setLouderSpeaker(boolean enable);
+主线程中调用，进入房间之后调用才有效
+函数原型：
+    public native int setLouderSpeaker(boolean enable);
 ```
 参数说明：
 
@@ -112,9 +112,9 @@ enable|boolean| true:打开扬声器；false:关闭扬声器
 
 ###### 3.6 调用音量：
 ```java
-	主线程中调用，进入房间之后调用才有效
-	函数原型：
-		public native int adjustSpeakerVolume(float volumeValue);
+主线程中调用，进入房间之后调用才有效
+函数原型：
+    public native int adjustSpeakerVolume(float volumeValue);
 ```
 参数说明：
 
@@ -125,9 +125,9 @@ enable|boolean| true:打开扬声器；false:关闭扬声器
 
 ###### 3.7 设置录音参数：
 ```java
-	主线程中调用
-	函数原型：
-		public native void setParams(String voiceUploadUrl, String xfId);
+主线程中调用
+函数原型：
+    public native void setParams(String voiceUploadUrl, String xfId);
 ```
 参数说明：
 
@@ -139,9 +139,9 @@ xfId|String|讯飞ID,录音时将录音文件翻译成文字时需要，在讯�
 
 ###### 3.8 录音
 ```java
-	主线程中调用，进入房间之后无法调用，必须离开房间或未进入房间
-	函数原型：
-	    public native boolean startRecordVoice(boolean needConvertWord);
+主线程中调用，进入房间之后无法调用，必须离开房间或未进入房间
+函数原型：
+    public native boolean startRecordVoice(boolean needConvertWord);
 ```
 参数说明：
 
@@ -153,23 +153,23 @@ needConvertWord|boolean|是否需要将录音翻译成文字，true:翻译成文
 
 ###### 3.9 停止录音
 ```java
-	主线程中调用，进入房间之后无法调用，必须离开房间或未进入房间
-	函数原型：
-	  public native boolean stopRecordVoice();
+主线程中调用，进入房间之后无法调用，必须离开房间或未进入房间
+函数原型：
+  public native boolean stopRecordVoice();
 ```
 
 
 ###### 3.10 取消录音：
 ```java
-	主线程中调用
-	函数原型：
-	    public native boolean cancelRecordedVoice();
+主线程中调用
+函数原型：
+    public native boolean cancelRecordedVoice();
 ```
 ###### 3.11 播放录音
 ```java
-	主线程中调用
-	函数原型：
-	    public native boolean startPlayLocalVoice(String filepath);
+主线程中调用
+函数原型：
+    public native boolean startPlayLocalVoice(String filepath);
 ```
 参数说明：
 
@@ -180,16 +180,16 @@ filePath|String|录音完后自动上传回调返回来的录音文件地址url
 
 ###### 3.12 停止播放录音
 ```java
-	主线程中调用
-	函数原型：
-	public native boolean stopRecordVoice();
+主线程中调用
+函数原型：
+public native boolean stopRecordVoice();
 ```
 
 ###### 3.13 反注册
 ```java
-	主线程中调用，当不使用本sdk时调用，一般在onDestroy中调用，
-	函数原型：
-	public native void unRegister();
+主线程中调用，当不使用本sdk时调用，一般在onDestroy中调用，
+函数原型：
+public native void unRegister();
 ```
 ---
 #### 四：回调：
@@ -199,7 +199,7 @@ filePath|String|录音完后自动上传回调返回来的录音文件地址url
 	只有录音结束、上传完成后才能调用播放录音的接口.
 ###### 4.2.原型：
 ```java
-	public void rtchatsdkListener(int cmdType, final int error, String dataPtr, int dataSize)
+public void rtchatsdkListener(int cmdType, final int error, String dataPtr, int dataSize)
 ```
 ###### 4.3.参数说明：
 参数|类型|说明
@@ -212,46 +212,50 @@ dataSize|int|返回的字符串数据大小
 ```java
 receiveDataFromC = new ReceiveDataFromC();
 receiveDataFromC.setRtChatSDKVoiceListener(new RTChatSDKVoiceListener() {
-		@Override
-		public void rtchatsdkListener(int cmdType, final int error, String dataPtr, int dataSize) {
-				switch (cmdType) {
-						case 1://初始化
-								runOnUiThread(new Runnable() {
-										@Override
-										public void run() {
-												Toast.makeText(MainActivity.this, "初始化完毕" + error, 0).show();
-										}
-								});
-								break;
-						case 7://进入房间
-								runOnUiThread(new Runnable() {
-										@Override
-										public void run() {
-												Toast.makeText(MainActivity.this, "进入房间" + error, 0).show();
-										}
-								});
-								break;
-						case 25://录音结束，上传成功
-								FileData fileData = getDataFromJson(dataPtr);
-								String voiceText;
-								float duration;
-								if (fileData == null) {
-										downloadUrlLocal = null;
-										voiceText = null;
-										duration = 0;
-								} else {
-										downloadUrlLocal = fileData.getUrl();
-										voiceText = fileData.getText();
-										duration = Float.valueOf(fileData.getDuration());
-								}
-								voiceTextLocal = voiceText;
-								etResult.setText("回调后的翻译：" + voiceTextLocal);
-								break;
-						case 35://播放结束
-								Toast.makeText(MainActivity.this, "播放完毕", 0).show();
-								Log.i(TAG, "-MainActivity-播放完毕------error" + error + " " + dataSize);
-								break;
-				}
-		}
+    @Override
+    public void rtchatsdkListener(int cmdType, final int error, String dataPtr, int dataSize) {
+        Log.i(TAG, "-回调到MainActivity中-jni_log----cmdType:" + cmdType + " error:" + error + " dataPtr:" + dataPtr + " dataSize:" + dataSize);
+        switch (cmdType) {
+            case 1://初始化
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MainActivity.this, "初始化完毕" + error, 0).show();
+                    }
+                });
+                Log.i(TAG, "-MainActivity-初始化完毕------lala" + error);
+                break;
+            case 7://进入房间
+                Log.i(TAG, "-MainActivity-joinRoom------lala" + error);
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(MainActivity.this, "进入房间" + error, 0).show();
+                    }
+                });
+                break;
+            case 25://录音结束，上传成功
+                FileData fileData = getDataFromJson(dataPtr);
+                String voiceText;
+                float duration;
+                if (fileData == null) {
+                    downloadUrlLocal = null;
+                    voiceText = null;
+                    duration = 0;
+                } else {
+                    downloadUrlLocal = fileData.getUrl();
+                    voiceText = fileData.getText();
+                    duration = Float.valueOf(fileData.getDuration());
+                }
+                Log.i(TAG, "-录音结束-jni_log----error:" + error + " downloadUrlLocal:" + downloadUrlLocal + " duration:" + duration + " text:" + voiceText);
+                voiceTextLocal = voiceText;
+                etResult.setText("回调后的翻译：" + voiceTextLocal);
+                break;
+            case 35://播放结束
+                Toast.makeText(MainActivity.this, "播放完毕", 0).show();
+                Log.i(TAG, "-MainActivity-播放完毕------error" + error + " " + dataSize);
+                break;
+        }
+    }
 });
 ```
