@@ -10,7 +10,9 @@
 ###### 2.1.加入libs
 	创建Android Studio项目：ASDemo，<p/>
 	把解压的后获取的文件放到ASDemo/app/libs中，然后Add as Library,如图：
+<br>
 <img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/addlibrary.png" width="430">
+<br/>
 ```xml
 其中support v4包是供unit等使用的，Android studio推荐使用gradle配置：
 app/build.gradle 的dependencies标签中：
