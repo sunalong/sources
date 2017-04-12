@@ -20,7 +20,15 @@ compile 'com.android.support:appcompat-v7:25.3.0'
 ```
 
 ###### 2.2.配置so库的加载
-	在app/build.gradle的android标签中配置：
+
+```xml
+在app/build.gradle的android标签中配置：
+sourceSets{
+  main{
+      jniLibs.srcDir("libs")
+  }
+}
+```  
 
 ###### 2.3.配置权限：
 ```xml
