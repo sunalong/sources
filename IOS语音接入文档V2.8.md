@@ -28,7 +28,7 @@ SDK说明：
 3.确认工程的Build Settings->Other Linker Flags下有-ObjC配置，如无请自行添加
 注:请在Build Phases下检查是否有增加了如下静态链接库，如无请添加
 ```
-<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/ios-07171.png" width="500">
+<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/ios-07171.png" width="430">
 
 ###### 2.2.配置权限：
 ```xml
