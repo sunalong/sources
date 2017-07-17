@@ -33,9 +33,9 @@ Xcode 显示为:
 
 <img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/coco_ios_3.png" width="430">
 
-###### 2.2 Android 系统配置
+##### 2.2 Android 系统配置
 
-####### 2.2.1 Eclipse配置：
+###### 2.2.1 Eclipse配置：
  >把libs/Android/下文件放到proj.android/libs目录下。然后include和libs/Android目录放到合适的目录，比如工程下面建一个GiantVoice目录：
 
 <img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/coco_android_1.png" width="430">
@@ -51,11 +51,11 @@ Xcode 显示为:
 <img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/coco_android_8.png" width="430">
 
 在proj.android/AndroidManifest.xml添加如下权限即可按照Cocos的编译方式
-<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/coco_android_6.png" width="430">
+<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/cocosandroid-07171.jpg" width="430">
 最后需要在Java中初始化，比如：
 <img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/coco_android_7.png" width="430">
 
-####### 2.2.2 Android Studio配置：
+###### 2.2.2 Android Studio配置：
 ```xml
   在app目录下创建文件夹libs，将下载的libs中的Android中的文件拷到libs目录下，并Add AS library
   配置Android.mk

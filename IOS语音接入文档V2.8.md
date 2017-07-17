@@ -6,7 +6,7 @@ SDK说明：
 一：本SDK支持两种语音模式：
 	1.实时语音
 		两人都进入同一个房间，就可以像打电话那样聊天，支持多人进入同一个房间
-  2.离线语音
+	2.离线语音
 		如同微信发语音那样，录制一段语音发送到服务器，服务器返回此语音在服务器的地址，
 		然后用户可将此地址发送给其他用户达到语音交流的效果
 二：本SDK支持视频聊天，可直播
@@ -16,7 +16,8 @@ SDK说明：
 ```
 
 #### 一：下载sdk并解压
-###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_2.8.2.zip)
+###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_2.8.zip)
+
 
 ---
 #### 二：项目配置
@@ -27,7 +28,7 @@ SDK说明：
 3.确认工程的Build Settings->Other Linker Flags下有-ObjC配置，如无请自行添加
 注:请在Build Phases下检查是否有增加了如下静态链接库，如无请添加
 ```
-<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/addlibrary.png" width="430">
+<img src="http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_img/ios-07171.png" width="500">
 
 ###### 2.2.配置权限：
 ```xml
