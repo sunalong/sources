@@ -1,4 +1,4 @@
-readme.md 语法 
+readme.md 语法
 =========
 
 ##无序列表：
@@ -44,7 +44,7 @@ I get 10 times more traffic from [Google][1] than from
 语法：
 \!\[\]\(图片的地址\)
 <br>
-![alt text](https://github.com/sunalong/theImages/blob/master/cat.png "Cat")
+![alt text](https://github.com/sunalong/sources/blob/master/img/cat.png "Cat")
 
 <br>
 参考形式：
@@ -53,7 +53,7 @@ I get 10 times more traffic from [Google][1] than from
 \[varName\]:图片地址
 <br>
 ![alt text][id]
-[id]: https://github.com/sunalong/theImages/blob/master/github.png "GitHub"
+[id]: https://github.com/sunalong/sources/img/blob/master/img/github.png "GitHub"
 
 方法三：
 语法：\<img src="图片地址" width="240"\>
