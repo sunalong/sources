@@ -53,7 +53,7 @@ I get 10 times more traffic from [Google][1] than from
 \[varName\]:图片地址
 <br>
 ![alt text][id]
-[id]: https://github.com/sunalong/sources/img/blob/master/img/github.png "GitHub"
+[id]: https://github.com/sunalong/sources/blob/master/img/github.png "GitHub"
 
 方法三：
 语法：\<img src="图片地址" width="240"\>
