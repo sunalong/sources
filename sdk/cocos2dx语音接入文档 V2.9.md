@@ -14,7 +14,7 @@ SDK说明：
 ```
 
 ### 一：下载SDK
-1.[Cocos2d语音SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_cocos_release_2.8.2.zip)
+1.[Cocos2d语音SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_cocos_release_2.9.zip)
 
 ---
 

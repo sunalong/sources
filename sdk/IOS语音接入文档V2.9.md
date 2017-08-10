@@ -1,4 +1,4 @@
-## IOS应用语音接入文档 V2.8
+## IOS应用语音接入文档 V2.9
 
 平台Xcode
 ```xml
@@ -16,7 +16,7 @@ SDK说明：
 ```
 
 #### 一：下载sdk并解压
-###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_2.8.zip)
+###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_2.9.zip)
 
 
 ---

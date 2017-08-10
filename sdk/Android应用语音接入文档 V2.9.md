@@ -1,4 +1,4 @@
-## Android应用语音接入文档 V2.8
+## Android应用语音接入文档 V2.9
 
 平台Android Studio
 ```xml
@@ -15,7 +15,7 @@ SDK说明：
 ```
 
 #### 一：下载sdk并解压
-###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_android_release_2.8.1.zip)
+###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_android_release_2.9.zip)
 
 ---
 #### 二：项目配置
@@ -395,16 +395,16 @@ view|SurfaceView|本地视频渲染窗口
 ###### 5.7 接收远端视频：
 ```java
 主线程中调用，进入房间之后调用才有效
-	mNVEngine.startObserverRemoteVideo(glRemoteSurfaceViewContainer.getSurfaceView());
+	mNVEngine.observerRemoteTargetVideo("",glRemoteSurfaceViewContainer.getSurfaceView());
 函数原型：
-	public native int startObserverRemoteVideo(SurfaceView view);
+	public native int observerRemoteTargetVideo(String target,SurfaceView view);
 ```
 参数说明：
 
 参数|类型|说明
 :-:|:-:|:-:
 view|SurfaceView|远端视频渲染窗口
-enable|boolean| true:打开扬声器；false:关闭扬声器
+target|String| 传入的字符是用户名，用以查看指定用户的视频，空字符串代表查看混合视频
 返回值|int|0 失败, 1 成功
 
 ###### 5.8 关闭远端视频：
