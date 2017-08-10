@@ -249,16 +249,16 @@ view|SurfaceView|本地视频渲染窗口
 ###### 4.7 接收远端视频：
 ```Objective-C
 主线程中调用，进入房间之后调用才有效
-	RTChatSDKMain::sharedInstance().startObserverRemoteVideo(ovideoView);
+	RTChatSDKMain::sharedInstance().observerRemoteTargetVideo("",ovideoView);
 函数原型：
-	SdkErrorCode startObserverRemoteVideo(void* ptrWindow = nullptr);
+	SdkErrorCode observerRemoteTargetVideo(const char* userID, void* ptrWindow);
 ```
 参数说明：
 
 参数|类型|说明
 :-:|:-:|:-:
 view|SurfaceView|远端视频渲染窗口
-enable|boolean| true:打开扬声器；false:关闭扬声器
+target|String| 传入的字符是用户名，用以查看指定用户的视频，空字符串代表查看混合视频
 返回值|int|0 失败, 1 成功
 
 ###### 4.8 关闭远端视频：
