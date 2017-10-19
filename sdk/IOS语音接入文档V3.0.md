@@ -16,7 +16,7 @@ SDK说明：
 ```
 
 #### 一：下载sdk并解压
-###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_2.9.zip)
+###### 1. [下载SDK](http://cdn.mztgame.ztgame.com.cn/gavoice_rtchat/resource_zip/RTChatSDK_ios_release_3.0.zip)
 
 
 ---
@@ -157,15 +157,17 @@ xfId|String|讯飞ID,录音时将录音文件翻译成文字时需要，在讯�
 ###### 3.9 录音
 ```Objective-C
 主线程中调用，进入房间之后无法调用，必须离开房间或未进入房间
-  RTChatSDKMain::sharedInstance().startRecordVoice(true);
+  RTChatSDKMain::sharedInstance().startRecordVoice(true,true,1);
 函数原型：
-  SdkErrorCode startRecordVoice(bool needConvertWord = false);
+  SdkErrorCode startRecordVoice(boolean needConvertWord,boolean isPersis, float scaleLevel);
 ```
 参数说明：
 
 参数|类型|说明
 :-:|:-:|:-:
 needConvertWord|boolean|是否需要将录音翻译成文字，true:翻译成文字
+isPersis|boolean|是否需要将录音文件永久保存，true:永久保存
+scaleLevel|float|录制声音的放大倍率，默认1.0，用户可根据需求调整
 
 
 
@@ -264,14 +266,16 @@ target|String| 传入的字符是用户名，用以查看指定用户的视频�
 ###### 4.8 关闭远端视频：
 ```Objective-C
 主线程中调用
-	RTChatSDKMain::sharedInstance().stopObserverRemoteVideo();
+	RTChatSDKMain::sharedInstance().observerRemoteTargetVideo("",null);
 函数原型：
-	SdkErrorCode stopObserverRemoteVideo();
+	SdkErrorCode observerRemoteTargetVideo(String target,SurfaceView view);
 ```
 参数说明：
 
 参数|类型|说明
 :-:|:-:|:-:
+view|SurfaceView|远端视频渲染窗口
+target|String| 传入的字符是用户名，用以查看指定用户的视频，空字符串代表不看远端视频
 返回值|int|0 失败, 1 成功
 
 ###### 4.9 切换发送视频源：
@@ -323,10 +327,11 @@ enabled|boolean| true:打开美颜；false:关闭美颜
 主线程中调用，进入房间之后调用才有效
 	RTChatSDKMain::sharedInstance().setVoiceChangeParm(pitch);
 函数原型：
-	SdkErrorCode setVoiceChangeParm(int pitch);
+	SdkErrorCode setVoiceChangeParm(int pitch, int reverbLevel);
 ```
 参数说明：
 
 参数|类型|说明
 :-:|:-:|:-:
 pitch|int|pitch 取值范围为 [-10,10]
+reverbLevel|int|取值范围为[0 ~ 9], 0 为原始声音，1到9，混响级别逐渐增强
