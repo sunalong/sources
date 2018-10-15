@@ -1,0 +1,37 @@
+vivo Demo安装到onePlus登录后崩溃：
+Handing Exception on to default ExceptionHandler
+08-13 10:47:29.736 11664-11897/? E/AndroidRuntime: FATAL EXCEPTION: main
+                                                   Process: com.ztgame.fir.vivo, PID: 11664
+                                                   android.view.WindowManager$BadTokenException: Unable to add window android.view.ViewRootImpl$W@f1d731 -- permission denied for window type 2003
+                                                       at android.view.ViewRootImpl.setView(ViewRootImpl.java:949)
+                                                       at android.view.WindowManagerGlobal.addView(WindowManagerGlobal.java:356)
+                                                       at android.view.WindowManagerImpl.addView(WindowManagerImpl.java:93)
+                                                       at com.vivo.assist.ai.a(AssitPresenter.java:3182)
+                                                       at com.vivo.assist.av.handleMessage(AssitPresenter.java:715)
+                                                       at android.os.Handler.dispatchMessage(Handler.java:106)
+                                                       at android.os.Looper.loop(Looper.java:164)
+                                                       at android.app.ActivityThread.main(ActivityThread.java:6753)
+                                                       at java.lang.reflect.Method.invoke(Native Method)
+                                                       at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:482)
+                                                       at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:807)
+08-13 10:47:29.738 11664-11897/? E/AndroidRuntime: Error reporting crash
+                                                   java.lang.InternalError: Thread starting during runtime shutdown
+                                                       at java.lang.Thread.nativeCreate(Native Method)
+                                                       at java.lang.Thread.start(Thread.java:733)
+                                                       at net.oneplus.odm.insight.FrameworkEventCollector.initHandler(FrameworkEventCollector.java:262)
+                                                       at net.oneplus.odm.insight.FrameworkEventCollector.<init>(FrameworkEventCollector.java:52)
+                                                       at com.android.internal.os.RuntimeInit$KillApplicationHandler.uncaughtException(RuntimeInit.java:143)
+                                                       at org.acra.ErrorReporter.endApplication(ErrorReporter.java:457)
+                                                       at org.acra.ErrorReporter.access$6(ErrorReporter.java:445)
+                                                       at org.acra.ErrorReporter$5.run(ErrorReporter.java:851)
+08-13 10:47:29.740 11664-11897/? I/Process: Sending signal. PID: 11664 SIG: 9
+08-13 10:47:29.767 1323-1887/? W/InputDispatcher: channel '3f50204 Toast (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+08-13 10:47:29.767 1323-1887/? E/InputDispatcher: channel '3f50204 Toast (server)' ~ Channel is unrecoverably broken and will be disposed!
+08-13 10:47:29.768 1323-1887/? W/InputDispatcher: channel '2b237cb com.ztgame.fir.vivo/com.giant.channel.demo.MainActivity (server)' ~ Consumer closed input channel or an error occurred.  events=0x9
+08-13 10:47:29.769 1323-1887/? E/InputDispatcher: channel '2b237cb com.ztgame.fir.vivo/com.giant.channel.demo.MainActivity (server)' ~ Channel is unrecoverably broken and will be disposed!
+08-13 10:47:29.780 1323-12915/? D/ConnectivityService: ConnectivityService NetworkRequestInfo binderDied(NetworkRequest [ LISTEN id=2042, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED] ], android.os.BinderProxy@19ad72b)
+08-13 10:47:29.781 1323-2664/? I/WindowManager: WIN DEATH: Window{2b237cb u0 com.ztgame.fir.vivo/com.giant.channel.demo.MainActivity}
+08-13 10:47:29.781 1323-2097/? D/ConnectivityService: releasing NetworkRequest [ LISTEN id=2042, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED] ] (release request)
+08-13 10:47:29.781 1323-2664/? W/InputDispatcher: Attempted to unregister already unregistered input channel '2b237cb com.ztgame.fir.vivo/com.giant.channel.demo.MainActivity (server)'
+08-13 10:47:29.781 1323-12934/? D/EmbryoManager: prepare com.ztgame.fir.vivo user 0
+08-13 10:47:29.782 1323-12934/? I/ActivityManager: Process com.ztgame.fir.vivo (pid 116
